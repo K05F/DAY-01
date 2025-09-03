@@ -7,9 +7,15 @@ int main()
     scanf("%d", &montant);
 
     printf("Billets de 20$ : %d\n", montant / 20);
-    if (montant % 20 != 0)
-    {
-        printf("Billets de 10$ : %d", montant / 10);
-    }
+    montant = montant % 20;
+    
+    printf("Billets de 10$ : %d\n", montant / 10);
+    montant = montant % 10;
+
+    printf("Billets de 5$ : %d\n", montant / 5);
+    montant = montant % 5;
+
+    printf("Billets de 1$ : %d", montant / 1);
+    
     return 0;
 }
